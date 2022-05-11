@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        runTimer();
     }
 
     public void onClickStart(View view) {
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void runTimer() {
-        final TextView timeView = (TextView) findViewById(R.id.time_view);
+        final TextView timeView = findViewById(R.id.time_view);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
